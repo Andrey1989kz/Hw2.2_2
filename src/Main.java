@@ -9,6 +9,7 @@ public class Main {
         Truck truck = new Truck("Volvo", 6);
         Truck truck1 = new Truck("Kenworth", 10);
 
+
         ServiceStation station = new ServiceStation();
         station.check(car);
         station.check(bicycle1);

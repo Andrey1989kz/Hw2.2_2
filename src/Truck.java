@@ -9,6 +9,7 @@ public class Truck extends Transport {
 
     }
 @Override
+
     public void checkEngine() {
     System.out.println(this.getModelName());
     System.out.println("Проверяем Двигатель");

@@ -12,6 +12,7 @@ public abstract class Transport {
     }
 
     public Transport(String modelName, int wheelsCount) {
+
         this.modelName = modelName;
         this.wheelsCount = wheelsCount;
     }
