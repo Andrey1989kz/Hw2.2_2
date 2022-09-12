@@ -7,6 +7,7 @@ public class Car extends Transport {
     }
 @Override
     public void updateTyre() {
+
         System.out.println("Проверяем и меняем покрышки: " + this.getWheelsCount() + "шт.");
     }
 @Override

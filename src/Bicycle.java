@@ -5,6 +5,7 @@ public  class Bicycle extends Transport {
         super(modelName, wheelsCount);
     }
 @Override
+
     public void updateTyre() {
     System.out.println(this.getModelName());
         System.out.println("Проверяем и меняем покрышки: " + this.getWheelsCount() + "шт.");
