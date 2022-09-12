@@ -1,28 +1,25 @@
-public class Car extends ServiceStation {
+public class Car extends Transport {
+    private String modelName;
+    private int wheelsCount;
 
     public Car(String modelName, int wheelsCount) {
-        super();
+        super(modelName, wheelsCount);
     }
-
-    @Override
+@Override
     public void updateTyre() {
-        super.updateTyre();
+        System.out.println("Проверяем и меняем покрышки: " + this.getWheelsCount() + "шт.");
+    }
+@Override
+    public void checkEngine() {
+        System.out.println(this.getModelName());
+        System.out.println("Диагностика двигателя");
     }
 
     @Override
-    public void checkEngine() {
-        super.checkEngine();
-    }
-
-    public void check(Car car) {
-        if (car != null) {
-            System.out.println("Обслуживаем " + car.getModelName());
-            for (int i = 0; i < car.getWheelsCount(); i++) {
-                car.updateTyre();
-            }
-            car.checkEngine();
-        }
-
-
+    public void checkAuto() {
+        checkEngine();
+        updateTyre();
     }
 }
+
+

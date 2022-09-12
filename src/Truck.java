@@ -1,33 +1,28 @@
-public class Truck extends ServiceStation {
+public class Truck extends Transport {
 
     public Truck(String modelName, int wheelsCount) {
-        super();
+        super(modelName, wheelsCount);
     }
-
-    @Override
+@Override
     public void updateTyre() {
-        super.updateTyre();
-    }
+        System.out.println("Проверяем и меняем покрышки: " + this.getWheelsCount() + "шт.");
 
-    @Override
+    }
+@Override
     public void checkEngine() {
-        super.checkEngine();
+    System.out.println(this.getModelName());
+    System.out.println("Проверяем Двигатель");
+
     }
 
     public void checkTrailer() {
-            System.out.println("Проверяем прицеп");
-        }
-        @Override
-    public  void check(Bicycle bicycle, Car car,Truck truck) {
-        if (truck != null) {
-            System.out.println("Обслуживаем " + truck.getModelName());
-            for (int i = 0; i < truck.getWheelsCount(); i++) {
-                truck.updateTyre();
-            }
-            truck.checkEngine();
-            truck.checkTrailer();
-        }
+        System.out.println("Проверяем прицеп");
     }
-
+    @Override
+    public void checkAuto() {
+checkEngine();
+checkTrailer();
+updateTyre();
+    }
 }
 
